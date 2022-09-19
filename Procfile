@@ -1,0 +1,1 @@
+web: gunicorn fairfields_foods.wsgi:application
