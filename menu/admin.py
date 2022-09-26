@@ -1,3 +1,6 @@
+""" Admin file for menu app """
 from django.contrib import admin
+from .models import Menu, OrderHistory
 
-# Register your models here.
+admin.site.register(Menu)
+admin.site.register(OrderHistory)

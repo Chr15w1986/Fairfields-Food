@@ -47,6 +47,7 @@ INSTALLED_APPS = [
 
     # Custom apps
     'home',
+    'menu',
 ]
 
 MIDDLEWARE = [
