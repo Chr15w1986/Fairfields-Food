@@ -3,17 +3,24 @@
 
 {% block content %}
 
-<section class="section">
+<section id="hero" class="hero d-flex align-items-center section-bg">
     <div class="container">
-        <img class="mx-2 mb-2 main-image" src="{% static 'media/hero-img.png' %}" alt="large cartoon cupcake in pink and yellow">
-        <br>
-        <h1>- 404 -</h1>
-        <hr>
-        <h5>Sorry, The cupcake you are looking for cannot be found.</h5>
-        <hr>
-        <h5>Please get out of the kitchen!</h5>
-        <hr>
-        <a class="btn btn-secondary" href="{% url 'home' %}">HOME</a>
+        <div class="row justify-content-between gy-5">
+            <div
+                class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
+                <h2 data-aos="fade-left" data-aos-delay="50">-- 404 --</h2>
+                <hr>
+                <p data-aos="fade-down" data-aos-delay="50">Sorry, The cupcake you are looking for cannot be found.</p>
+                <hr>
+                <p>Please get out of the kitchen!</p>
+                <hr>
+            </div>
+            <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start d-none d-lg-block">
+                <img src="{% static 'media/404-cake.jpg' %}" class="img-fluid" alt="smashed cake on the floor" data-aos="zoom-out"
+                    data-aos-delay="200">
+            </div>
+            <a class="btn btn-secondary" href="{% url 'home' %}">HOME</a>
+        </div>
     </div>
 </section>
 
