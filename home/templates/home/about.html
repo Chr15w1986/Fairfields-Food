@@ -12,9 +12,10 @@
                 <p><strong>About Us</strong></p>
             </div>
             <div class="row gy-4">
-                <!-- <div class="col-lg-7 position-relative about-img" style="background-image: url(assets/img/about.jpg) ;"
-                    data-aos="fade-up" data-aos-delay="150">
-                </div> -->
+                <div class="col-lg-7 position-relative about-img"
+                    style="background-image: url(static/media/chefs/chefs-1.jpg) ;" data-aos="fade-up"
+                    data-aos-delay="150">
+                </div>
                 <div class="col-lg-5 d-flex align-items-end" data-aos="fade-up" data-aos-delay="200">
                     <div class="content ps-0 ps-lg-5">
                         <p class="fst-italic">
@@ -22,34 +23,15 @@
                         </p>
                         <hr>
                         <ul>
-                            <li><i class="bi bi-check2-all"></i> Over 25 years experience in the bakery and catering buisness</li>
+                            <li><i class="bi bi-check2-all"></i> Over 25 years experience in the bakery and catering
+                                buisness</li>
                             <li><i class="bi bi-check2-all"></i> All of the food we cook and prepare is home made</li>
-                            <li><i class="bi bi-check2-all"></i> All cakes are baked from scratch and decorated by hand</li>
+                            <li><i class="bi bi-check2-all"></i> All cakes are baked from scratch and decorated by hand
+                            </li>
                         </ul>
                         <p>
-                            We at Fairfields foods pride ourselves on cleanliness, time management and keeping our customers happy
-                        </p>
-                        <hr>
-                        <div class="position-relative mt-4">
-                            <img src="{% static 'media/about-2.jpg' %}" class="img-fluid" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5 d-flex align-items-end" data-aos="fade-up" data-aos-delay="200">
-                    <div class="content ps-0 ps-lg-5">
-                        <p class="fst-italic">
-                            Cooking:
-                        </p>
-                        <hr>
-                        <ul>
-                            <li><i class="bi bi-check2-all"></i> 25 years experience</li>
-                            <li><i class="bi bi-check2-all"></i> We have cookers and stuff.</li>
-                            <li><i class="bi bi-check2-all"></i> Sometimes we burn things.</li>
-                            <li><i class="bi bi-check2-all"></i> Sometimes we burn things.</li>
-                            <li><i class="bi bi-check2-all"></i> Sometimes we burn things.</li>
-                        </ul>
-                        <p>
-                            We at Fairfields foods pride ourselves on cleanliness, time management and keeping our customers happy
+                            We at Fairfields foods pride ourselves on cleanliness, time management and keeping our
+                            customers happy
                         </p>
                         <hr>
                         <div class="position-relative mt-4">
@@ -61,4 +43,53 @@
         </div>
     </section>
 
-    {% endblock %}
+    <!-- WHY US -->
+    <section id="why-us" class="why-us section-bg">
+        <div class="container" data-aos="fade-up">
+            <div class="section-header">
+                <p><strong>Why choose us?</strong></p>
+            </div>
+            <div class="row gy-4">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150">
+                    <div class="why-box">
+                        <h3>Why Choose Fairfields Foods?</h3>
+                        <p>
+                            We pride ourselves in Blah blah blah.
+                        </p>
+                    </div>
+                </div><!-- End Why Box -->
+
+                <div class="col-lg-8 d-flex align-items-center">
+                    <div class="row gy-4">
+
+                        <div class="col-xl-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                                <i class="bi bi-clipboard-data"></i>
+                                <h4>Happy customers</h4>
+                                <p>We have had 3 happy cutomers to date</p>
+                            </div>
+                        </div><!-- End Icon Box -->
+
+                        <div class="col-xl-4" data-aos="fade-up" data-aos-delay="300">
+                            <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                                <i class="bi bi-gem"></i>
+                                <h4>Health and safety comliant</h4>
+                                <p>Some stuff about health and safety certification</p>
+                            </div>
+                        </div><!-- End Icon Box -->
+
+                        <div class="col-xl-4" data-aos="fade-up" data-aos-delay="400">
+                            <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                                <i class="bi bi-inboxes"></i>
+                                <h4>Hygiene</h4>
+                                <p>We are clean and stuff
+                                </p>
+                            </div>
+                        </div><!-- End Icon Box -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Why Us Section -->
+</main>
+{% endblock %}
