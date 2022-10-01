@@ -3,19 +3,26 @@
 
 {% block content %}
 
-<section class="section">
+<section id="hero" class="hero d-flex align-items-center section-bg">
     <div class="container">
-        <img class="mx-2 mb-2 main-image" src="{% static 'media/hero-img.png' %}" alt="large cartoon cupcake in pink and yellow">
-        <br>
-        <h1>- 500 -</h1>
-        <hr>
-        <h5>Internal server error</h5>
-        <hr>
-        <h3>Sorry, computer says no.</h3>
-        <hr>
-        <h5>Please return to home</h5>
-        <hr>
-        <a class="btn btn-secondary" href="{% url 'home' %}">HOME</a>
+        <div class="row justify-content-between gy-5">
+            <div
+                class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
+                <h2 data-aos="fade-left" data-aos-delay="50">-- 500 --</h2>
+                <hr>
+                <p data-aos="fade-down" data-aos-delay="50">Internal server error</p>
+                <hr>
+                <p data-aos="fade-down" data-aos-delay="50">Computer says no.</p>
+                <hr>
+                <p>Please return to home</p>
+                <hr>
+                <a class="btn btn-secondary" href="{% url 'home' %}">HOME</a>
+            </div>
+            <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start d-none d-lg-block">
+                <img src="{% static 'media/404-cake.jpg' %}" class="img-fluid rounded-lg" alt="smashed cake on the floor" data-aos="zoom-out"
+                    data-aos-delay="200">
+            </div>
+        </div>
     </div>
 </section>
 
