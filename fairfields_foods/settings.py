@@ -32,8 +32,8 @@ else:
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
-ALLOWED_HOSTS = ['fairfields-foods.herokuapp.com', 'localhost',
-                 'localhost:8000', '127.0.0.1', '127.0.0.1:8000']
+ALLOWED_HOSTS = ['www.fairfieldsfoods.co.uk', 'fairfields-foods.herokuapp.com',
+                 'localhost', 'localhost:8000', '127.0.0.1', '127.0.0.1:8000']
 
 # Application definition
 
