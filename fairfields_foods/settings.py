@@ -46,6 +46,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # Form handling
+    'crispy_forms',
+    'crispy_bootstrap5',
+
+    # Allauth
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
     # Custom apps
     'home',
     'menu',
@@ -65,6 +75,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'fairfields_foods.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 
 TEMPLATES = [
     {
@@ -105,6 +118,13 @@ else:
 
 SITE_ID = 1
 
+AUTHENTICATION_BACKENDS = [
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
