@@ -1,4 +1,4 @@
-""" Home page views """
+""" Home, about, gallery page views """
 
 from django.shortcuts import render
 
@@ -11,3 +11,8 @@ def index(request):
 def aboutus(request):
     """ View to return the about us page """
     return render(request, 'home/about.html')
+
+
+def gallery(request):
+    """ View to return the gallery page """
+    return render(request, 'home/gallery.html')
