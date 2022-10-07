@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     # Custom apps
     'home',
     'menu',
+    'profiles',
 
     # Amazon apps
     'storages',

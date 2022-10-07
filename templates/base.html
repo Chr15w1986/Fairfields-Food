@@ -69,6 +69,8 @@
                         <li><a href="{% url 'about' %}">About</a></li>
                         <li><a href="{% url 'menu' %}">Menu</a></li>
                         <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                        <li><a href="{% url 'profiles' %}">{{ user.username }}'s
+                            Profile</a></li>
                         <li><a href="#contact">Contact Us</a></li>
                         <li><a href="{% url 'account_logout' %}">Logout</a></li>
                     {% else %}

@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+{% if request.user.is_authenticated %}
+<section id="hero" class="hero d-flex align-items-center section-bg">
+	<div class="container">
+		<div class="row justify-content-between gy-5">
+			<div class="col-12 col-md-6">
+				<h1>Your Profile</h1>
+				<p>Customer: {{ user.userprofile.first_name }} {{ user.userprofile.last_name }}</p>
+				<p>Menu ordered: {{ user.userprofile.menu_name }} </p>
+				<p>Username: {{ user.username }}</p>
+				<p> Full name: {{ user.userprofile.first_name }}
+					{{ user.userprofile.last_name }}</p>
+				<p> Email: {{ user.userprofile.email }}</p>
+				<p> Phone: {{ user.userprofile.phone_number }}</p>
+				<p class="mx-auto mt-0 mb-1 border border-dark">
+					Address:<br>{{ user.userprofile.street_address1 }}<br>
+					{{ user.userprofile.street_address2 }}<br>
+					{{ user.userprofile.town_or_city }}<br>
+					{{ user.userprofile.county }}<br>
+					{{ user.userprofile.postcode }}<br>
+				</p>
+
+				{% for history in history %}
+
+				<p class="mx-auto mt-0 mb-1 border border-dark">
+					Order date: {{ history.order_date }} <br>
+					Buffet menu requested: "{{ history.menu_type }}"</p>
+
+				{% endfor %}
+
+				<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#profileModal">Edit
+					Profile</button>
+
+
+				<a href="{% url 'delete-profile' user.id %}">
+					<button type="button" class="btn btn-secondary">Delete
+						Profile</button></a>
+
+			</div>
+
+			<div class="modal fade" tabindex="-1" id="profileModal" role="dialog">
+				<div class="modal-dialog text-black" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Edit Profile</h5>
+							<button type="button" class="close rounded-3" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<form action="{% url 'update-profile' user.userprofile.id %}" method="post">
+								{% csrf_token %}
+								{{ form|crispy }}
+						</div>
+						<div class="modal-footer">
+							<button type="submit" class="btn btn-success">Save changes</button>
+							</form>
+							<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% else %}
+<h1>Please login to view your profile</h1>
+<a class="btn btn-secondary login" href="{% url 'account_login' %}">Login</a>
+{% endif %}
+
+{% endblock %}
