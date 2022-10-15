@@ -4,7 +4,7 @@ from django.urls import reverse
 from django.http import HttpResponseRedirect
 from django.contrib.auth import get_user_model
 from django.views.generic.base import TemplateView
-from django.views.generic.edit import UpdateView, DeleteView
+from django.views.generic.edit import UpdateView, DeleteView, FormView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404
@@ -16,7 +16,7 @@ from .models import UserProfile
 user = get_user_model()
 
 
-class ProfileView(LoginRequiredMixin, TemplateView):
+class ProfileView(LoginRequiredMixin, TemplateView, FormView):
     """ Renders the profile in a form """
     model = UserProfile
     form = UserForm
@@ -49,7 +49,7 @@ class UpdateProfile(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
               'phone_number')
     template_name = 'profiles/profile.html'
 
-    def post(self, request, pk, *args, **kwargs):
+    def post(self, request, *args, **kwargs):
         user = request.user.userprofile.id
         user_form = UserForm(request.POST, instance=request.user.userprofile)
         if user_form.is_valid():
@@ -67,7 +67,7 @@ class DeleteProfile(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = User
     template_name = 'profiles/delete-profile.html'
 
-    def post(self, request, pk, *args, **kwargs):
+    def post(self, request, *args, **kwargs):
         user = get_object_or_404(User, pk=request.user.id)
         user.delete()
 
