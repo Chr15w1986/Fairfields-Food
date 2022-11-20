@@ -4,14 +4,14 @@
 
 {% block content %}
 
-<section id="gallery" class="gallery section-bg hero d-flex align-items-center section-bg">
-    <div class="container" data-aos="fade-up">
+<section id="gallery" class="gallery section-bg d-flex align-items-center section-bg">
+    <div class="container">
 
-      <div class="section-header">
-        <h2>gallery</h2>
+      <div class="section-header mt-5">
+        <p><strong>gallery</strong></p>
       </div>
 
-      <div class="gallery-slider swiper">
+      <div class="gallery-slider swiper"  data-aos="fade-up">
         <div class="swiper-wrapper align-items-center">
           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{% static 'media/gallery/gallery-1.jpg' %}"><img src="{% static 'media/gallery/gallery-1.jpg' %}" class="img-fluid" alt=""></a></div>
           <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{% static 'media/gallery/gallery-2.jpg' %}"><img src="{% static 'media/gallery/gallery-2.jpg' %}" class="img-fluid" alt=""></a></div>
