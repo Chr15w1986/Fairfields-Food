@@ -8,7 +8,7 @@
 /* Colors */
 :root {
 	--color-default: #212529;
-	--color-primary: #ce1212;
+	--color-primary: #c34b4b;
 	--color-secondary: #37373f;
 }
 
@@ -343,7 +343,7 @@ section {
 		font-family: var(--font-secondary);
 		font-size: 16px;
 		font-weight: 600;
-		color: #7f7f90;
+		color: #000;
 		white-space: nowrap;
 		transition: 0.3s;
 		position: relative;
@@ -380,7 +380,7 @@ section {
 	.navbar .active,
 	.navbar .active:focus,
 	.navbar li:hover>a {
-		color: #000;
+		color: #7f7f90;
 	}
 
 	.navbar .dropdown ul {
