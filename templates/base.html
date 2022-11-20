@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Fairfields Food | Professional catering services</title>
+    <title>Fairfields Food | Professional buffet services</title>
     <meta name="description"
         content="Author: Chris Williams, Fairfields Food, Buffets and catering for parties, events, afternoon teas and lunches.">
     <meta content="food, catering, buffets, meals, snacks, finger food, fork food, party food" name="keywords">
@@ -69,7 +69,7 @@
                         <li><a href="{% url 'about' %}">About</a></li>
                         <li><a href="{% url 'menu' %}">Menu</a></li>
                         <li><a href="{% url 'gallery' %}">Gallery</a></li>
-                        <li><a href="#contact">Book us</a></li>
+                        <li><a href="{% url 'book-us' %}">Book us</a></li>
                         <li><a href="{% url 'profiles' %}">{{ user.username }}'s
                             Profile</a></li>
                         <li><a href="{% url 'account_logout' %}">Logout</a></li>
@@ -78,7 +78,7 @@
                         <li><a href="{% url 'about' %}">About</a></li>
                         <li><a href="{% url 'menu' %}">Menu</a></li>
                         <li><a href="{% url 'gallery' %}">Gallery</a></li>
-                        <li><a href="#">Book us</a></li>
+                        <li><a href="{% url 'book-us' %}">Book us</a></li>
                         <li><a href="{% url 'account_signup' %}">Register</a></li>
                         <li><a href="{% url 'account_login' %}">Login</a></li>
                     {% endif %}
