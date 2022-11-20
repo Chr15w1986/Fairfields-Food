@@ -16,3 +16,8 @@ def aboutus(request):
 def gallery(request):
     """ View to return the gallery page """
     return render(request, 'home/gallery.html')
+
+
+def bookus(request):
+    """ View to return the book us/contact page """
+    return render(request, 'home/bookus.html')
