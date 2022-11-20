@@ -1340,11 +1340,6 @@ section {
 	overflow: hidden;
 }
 
-.img-fluid {
-	max-height: 10rem;
-	
-}
-
 .gallery .swiper-pagination {
 	margin-top: 20px;
 	padding-top: 10px;
