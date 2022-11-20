@@ -28,7 +28,7 @@ class ProfileView(LoginRequiredMixin, TemplateView, FormView):
         return super().form_valid(form)
 
     def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
+        context = super(ProfileView, self).get_context_data(**kwargs)
         context['history'] = OrderHistory.objects.filter(booked_by=self.request.user)  # noqa
         context['form'] = UserForm(instance=self.request.user.userprofile)
         return context

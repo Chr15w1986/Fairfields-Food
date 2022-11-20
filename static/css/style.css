@@ -1209,7 +1209,7 @@ section {
 }
 
 .book-a-table .php-email-form {
-	padding: 40px;
+	padding: 20px;
 }
 
 @media (max-width: 575px) {
@@ -1340,8 +1340,14 @@ section {
 	overflow: hidden;
 }
 
+.img-fluid {
+	max-height: 10rem;
+	
+}
+
 .gallery .swiper-pagination {
 	margin-top: 20px;
+	padding-top: 10px;
 	position: relative;
 }
 
