@@ -59,7 +59,7 @@
 
             <a href="{% url 'home' %}" class="logo d-flex align-items-center me-auto me-lg-0">
                 <img src="{% static 'media/hero-img.png' %}" alt="cake">
-                <h1 data-aos="fade-right">Fairfields Food<span>.</span></h1>
+                <h1 data-aos="fade-left">Fairfields Food<span>.</span></h1>
             </a>
 
             <nav id="navbar" class="navbar">
@@ -79,6 +79,7 @@
                         <li><a href="{% url 'menu' %}">Menu</a></li>
                         <li><a href="{% url 'gallery' %}">Gallery</a></li>
                         <li><a href="{% url 'book-us' %}">Book us</a></li>
+                        <!-- if user is not logged in, change book-us to get a quote maybe? -->
                         <li><a href="{% url 'account_signup' %}">Register</a></li>
                         <li><a href="{% url 'account_login' %}">Login</a></li>
                     {% endif %}
