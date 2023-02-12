@@ -70,7 +70,7 @@
                         <li><a href="{% url 'menu' %}">Menu</a></li>
                         <li><a href="{% url 'gallery' %}">Gallery</a></li>
                         <li><a href="{% url 'book-us' %}">Book us</a></li>
-                        <li><a href="{% url 'profiles' %}">{{ user }}'s
+                        <li><a href="{% url 'profiles' %}">My
                             Profile</a></li>
                         <li><a href="{% url 'account_logout' %}">Logout</a></li>
                     {% else %}
@@ -78,7 +78,7 @@
                         <li><a href="{% url 'about' %}">About</a></li>
                         <li><a href="{% url 'menu' %}">Menu</a></li>
                         <li><a href="{% url 'gallery' %}">Gallery</a></li>
-                        <li><a href="{% url 'book-us' %}">Book us</a></li>
+                        <li><a href="{% url 'book-us' %}">Get a Quote</a></li>
                         <!-- if user is not logged in, change book-us to get a quote maybe? -->
                         <li><a href="{% url 'account_signup' %}">Register</a></li>
                         <li><a href="{% url 'account_login' %}">Login</a></li>
