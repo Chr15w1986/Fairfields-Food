@@ -33,6 +33,7 @@ else:
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 ALLOWED_HOSTS = ['www.fairfieldsfoods.co.uk', 'fairfields-foods.herokuapp.com',
+                 '8000-chr15w1986-fairfieldsfo-qbv0toqud74.ws-eu105.gitpod.io',
                  'localhost', 'localhost:8000', '127.0.0.1', '127.0.0.1:8000']
 
 # Application definition
